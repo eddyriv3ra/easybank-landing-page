@@ -34,6 +34,7 @@ module.exports = {
         },
         tertiary: {
           DEFAULT: "var(--tertiary)",
+          background: "var(--tertiary-background)",
         },
         quaternary: {
           DEFAULT: "var(--quaternary)",

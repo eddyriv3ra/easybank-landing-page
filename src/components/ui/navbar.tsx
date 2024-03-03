@@ -28,19 +28,21 @@ const links = [
 
 const Navbar = () => {
   return (
-    <div className="flex h-20 items-center justify-center">
-      <Image
-        src="/images/logo.svg"
-        width={138}
-        height={20}
-        style={{ objectFit: "contain" }}
-        alt="easy bank icon"
-      />
-      <div className="flex gap-[30px] ml-[251px] mr-[226px]">
-        {links.map((link) => {
-          return (
-            <Link
-              className="text-quaternary tracking-[-0.108px] text-sm
+    <div className="bg-[rgb(255,255,255)] flex justify-center w-full sticky z-40 px-[160px]">
+      <div className="flex h-20 w-[1440px] max-w-screen-2xl items-center justify-between">
+        <Image
+          src="/images/logo.svg"
+          width={138}
+          height={20}
+          style={{ objectFit: "contain"}}
+          alt="easy bank icon"
+        />
+        <div className="flex gap-[30px]">
+          {links.map((link) => {
+            return (
+              <Link
+                className="text-quaternary tracking-[-0.108px]
+              text-sm
               relative
               after:content-[''] after:absolute
               after:from-primary-from
@@ -53,23 +55,16 @@ const Navbar = () => {
               after:duration-350
               hover:after:w-full
               hover:text-tertiary"
-              key={link.id}
-              href={`/${link.name.toLowerCase}`}
-            >
-              {link.name}
-            </Link>
-          );
-        })}
+                key={link.id}
+                href={`/${link.name.toLowerCase}`}
+              >
+                {link.name}
+              </Link>
+            );
+          })}
+        </div>
+        <Button className="h-11 min-w-[163px]">Request Invite</Button>
       </div>
-      <Button
-        className="h-11 min-w-[163px]
-          rounded-[22px] font-bold leading-7
-          from-primary-from to-primary-to bg-gradient-135
-          transition-all duration-350
-          hover:opacity-40 hover:bg-white"
-      >
-        Request Invite
-      </Button>
     </div>
   );
 };
