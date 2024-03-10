@@ -29,15 +29,21 @@ const links = [
 const Navbar = () => {
   return (
     <div className="bg-[rgb(255,255,255)] flex justify-center w-full sticky z-40">
-      <div className="flex h-20 w-[1440px] max-w-screen-2xl items-center justify-between px-[165px]">
+      <div className="flex h-20 min-w-[1200px] w-[1440px] items-center justify-between px-[165px] max-sm:h-16">
         <Image
           src="/images/logo.svg"
           width={138}
           height={20}
-          style={{ objectFit: "contain"}}
+          style={{ objectFit: "contain" }}
           alt="easy bank icon"
         />
-        <div className="flex gap-[30px]">
+        <div
+          className="flex gap-[30px]"
+          // max-sm:flex-col max-sm:fixed 
+          // max-sm:left-[50%] max-sm:top-[50px] max-sm:text-center
+          // max-sm:my-6 max-sm:px-8 max-sm:-translate-x-2/4
+          // max-sm:w-[327px] max-sm:h-[265px] max-sm:bg-white
+        >
           {links.map((link) => {
             return (
               <Link

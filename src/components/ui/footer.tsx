@@ -4,9 +4,9 @@ import { Button } from "./button";
 
 function Footer() {
   return (
-    <div className="w-full flex justify-center">
-      <div className="bg-tertiary w-[1440px] h-[191px]">
-        <div className="w-[1110px] h-[95px] mx-[165px] my-12 flex">
+    <div className="max-w-[1440px]">
+      <div className="bg-tertiary min-w-[1440px] h-[191px]">
+        <div className="w-[1110px] h-[95px] mx-[165px] py-12 flex">
           <div>
             <Image
               src="/images/easybank-footer.svg"
