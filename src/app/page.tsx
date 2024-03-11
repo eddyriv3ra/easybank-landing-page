@@ -9,20 +9,18 @@ export default function Home() {
     <main>
       <div className="sm:w-[1440px] mx-auto">
         <div className="flex bg-tertiary-background sm:h-[736px] w-full max-sm:flex-col-reverse">
-          <div className="sm:h-[316px] sm:ml-[165px] sm:mt-44 max-sm:flex max-sm:flex-col max-sm:items-center mt-[41px] max-sm:h-[261px] max-sm:justify-between">
+          <div className="sm:h-[316px] sm:ml-[165px] sm:mt-44 max-sm:flex max-sm:flex-col max-sm:items-center mt-[41px] max-sm:h-[261px]">
             <div className="sm:w-[447px] min-w-[327px] max-sm:mx-6">
-              <div className="max-sm:h-[94px]">
                 <p className="text-tertiary text-[56px] leading-[64px] font-light tracking-[-1px] sm:mb-6 max-sm:text-center max-sm:text-[40px] max-sm:leading-none max-sm:tracking-[-0.714px]">
                   Next generation digital banking
                 </p>
-              </div>
-              <div className="text-quaternary tracking-[-1px] leading-7 text-lg max-sm:text-center max-sm:text-[15px] max-sm:leading-[25px] max-sm:tracking-[-0.234px]">
+              <div className="text-quaternary tracking-[-1px] leading-7 text-lg max-sm:text-center max-sm:text-[15px] max-sm:leading-[25px] max-sm:tracking-[-0.234px] max-sm:mt-4">
                 Take your financial life online. Your Easybank account will be a
                 one-stop-shop for spending, saving, budgeting, investing, and
                 much more.
               </div>
             </div>
-            <Button className="h-11 min-w-[163px] sm:mt-9">
+            <Button className="h-11 min-w-[163px] sm:mt-9 max-sm:mt-[32px]">
               Request Invite
             </Button>
           </div>
@@ -59,23 +57,23 @@ export default function Home() {
                   priority
                   width={830}
                   height={830}
-                  className="object-contain sm:max-w-none max-sm:absolute max-sm:z-10 max-sm:top-[0] md:hidden"
+                  className="object-contain sm:max-w-none max-sm:absolute max-sm:z-10 max-sm:top-[0] sm:hidden"
                 />
               </div>
             </div>
           </div>
         </div>
-        {/* <div className="h-[676px] bg-quaternary-background pl-[165px] pt-[96px]">
-          <div className="w-[635px] h-[136px] flex justify-between flex-col">
-            <p className="text-tertiary text-[40px] font-light">
+        <div className="sm:h-[676px] bg-quaternary-background sm:pl-[165px] sm:pt-[96px] max-sm:pt-16 max-sm:px-6 max-sm:min-w-[327px]">
+          <div className="sm:w-[635px] sm:h-[136px] flex sm:justify-between flex-col max-sm:text-center">
+            <p className="text-tertiary text-[40px] font-light max-sm:text-[32px] max-sm:tracking-[-0.571px] max-sm:leading-[1.7rem]">
               Why choose Easybank?
             </p>
-            <p className="text-quaternary text-lg font-normal tracking-[-0.281px]">
+            <p className="text-quaternary text-lg font-normal tracking-[-0.281px] max-sm:text-[15px] max-sm:leading-[25px] max-sm:tracking-[-0.234px] max-sm:mt-[14px]">
               We leverage Open Banking to turn your bank account into your
               financial hub. Control your finances like never before.
             </p>
           </div>
-          <div className="flex mt-[72px] gap-8">
+          <div className="sm:flex sm:mt-[72px] sm:gap-8 max-sm:mt-14 max-sm:flex max-sm:flex-col max-sm:gap-8">
             {cardItemsMock.map(({ imageSrc, title, description, id }) => {
               return (
                 <div key={id}>
@@ -89,14 +87,14 @@ export default function Home() {
             })}
           </div>
         </div>
-        <div className="bg-tertiary-background h-[659px] w-full px-[165px] pt-20">
-          <div className="w-[1110px] h-[499px]">
+        <div className="bg-[tertiary-background] sm:h-[659px] w-full sm:px-[165px] sm:pt-20 max-sm:px-6">
+          <div className="sm:w-[1110px] sm:h-[499px]">
             <div className="h-[64px]">
-              <p className="text-tertiary text-[40px] font-light leading-[64px] tracking[-0.714px]">
+              <p className="text-tertiary text-[40px] sm:font-light leading-[64px] tracking[-0.714px] max-sm:text-center">
                 Latest Articles
               </p>
             </div>
-            <div className="mt-10 flex gap-[30px] bg-[#FFF]">
+            <div className="sm:mt-10 max-sm:mt-[31px] sm:flex gap-[30px] bg-[#FFF] max-sm:flex max-sm:flex-col max-sm:gap-6">
               {latestArticles.map((article) => {
                 return (
                   <Article key={article.id} article={article} />
@@ -104,7 +102,7 @@ export default function Home() {
               })}
             </div>
           </div>
-        </div> */}
+        </div>
       </div>
     </main>
   );
