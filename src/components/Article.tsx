@@ -29,7 +29,7 @@ function Article({ article }: IArticle) {
         <p className="text-tertiary text-base font-light sm:leading-5 tracking-[-0.286px] my-2 hover:text-[#30C88F] hover:cursor-pointer max-sm:leading-[20px]">
           {article.title}
         </p>
-        <p className="text-quaternary text-[13px] font-normal leading-[18px] tracking-[-0.203px] max-sm:h-[72px] max-sm:pb-6">
+        <p className="text-quaternary text-[13px] font-normal leading-[18px] tracking-[-0.203px] max-sm:min-h-[72px] max-sm:pb-6">
           {article.description}
         </p>
       </div>

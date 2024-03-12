@@ -4,9 +4,9 @@ import { Button } from "./button";
 
 function Footer() {
   return (
-    <div className="max-w-[1440px]">
-      <div className="bg-tertiary min-w-[1440px] h-[191px]">
-        <div className="w-[1110px] h-[95px] mx-[165px] py-12 flex">
+    <div className="sm:max-w-[1440px]">
+      <div className="bg-tertiary sm:min-w-[1440px] sm:h-[191px]">
+        <div className="sm:w-[1110px] sm:h-[95px] sm:mx-[165px] py-12 flex max-sm:flex-col max-sm:items-center">
           <div>
             <Image
               src="/images/easybank-footer.svg"
@@ -19,29 +19,29 @@ function Footer() {
               src="/images/social.svg"
               width={154}
               height={20}
-              style={{ objectFit: "contain", marginTop: 55 }}
+              className="object-contain sm:mt-[55px] max-sm:my-8"
               alt="social"
             />
           </div>
-          <div className="w-[160px] ml-[131px] text-white text-[15px] font-normal leading-[26px] tracking-[-0.234px] flex gap-2 flex-col">
+          <div className="w-[160px] sm:ml-[131px] text-white text-[15px] font-normal leading-[26px] tracking-[-0.234px] flex gap-2 flex-col max-sm:text-center">
             <p className="hover:text-[#30C88F] hover:cursor-pointer">
               About Us
             </p>
             <p className="hover:text-[#30C88F] hover:cursor-pointer">Contact</p>
             <p className="hover:text-[#30C88F] hover:cursor-pointer">Blog</p>
           </div>
-          <div className="w-[160px] ml-[30px] text-white text-[15px] font-normal leading-[26px] tracking-[-0.234px] flex gap-2 flex-col">
+          <div className="w-[160px] sm:ml-[30px] text-white text-[15px] font-normal leading-[26px] tracking-[-0.234px] flex gap-2 flex-col max-sm:text-center max-sm:mt-2">
             <p className="hover:text-[#30C88F] hover:cursor-pointer">Careers</p>
             <p className="hover:text-[#30C88F] hover:cursor-pointer">Support</p>
             <p className="hover:text-[#30C88F] hover:cursor-pointer">
               Privacy Policy
             </p>
           </div>
-          <div className="ml-[255px] flex flex-col justify-between items-end">
+          <div className="sm:ml-[255px] flex flex-col sm:justify-between sm:items-end max-sm:items-center max-sm:mt-8">
               <Button className="h-11 w-[163px]">
                 Request Invite
               </Button>
-            <div className="text-white font-normal text-[15px] leading-[26px] tracking-[-0.234px] opacity-50">
+            <div className="text-white font-normal text-[15px] leading-[26px] tracking-[-0.234px] opacity-50 max-sm:mt-6">
               <p>© Easybank. All Rights Reserved</p>
             </div>
           </div>

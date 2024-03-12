@@ -3,14 +3,15 @@ import CardItems from "@/components/CardItems";
 import { Button } from "@/components/ui/button";
 import { cardItemsMock, latestArticles } from "@/mock-data";
 import Image from "next/image";
+import { Fragment } from "react";
 
 export default function Home() {
   return (
     <main>
       <div className="sm:w-[1440px] mx-auto">
         <div className="flex bg-tertiary-background sm:h-[736px] w-full max-sm:flex-col-reverse">
-          <div className="sm:h-[316px] sm:ml-[165px] sm:mt-44 max-sm:flex max-sm:flex-col max-sm:items-center mt-[41px] max-sm:h-[261px]">
-            <div className="sm:w-[447px] min-w-[327px] max-sm:mx-6">
+          <div className="sm:h-[316px] sm:ml-[165px] sm:mt-44 max-sm:flex max-sm:flex-col max-sm:items-center mt-[41px]">
+            <div className="sm:w-[447px] max-sm:mx-6">
                 <p className="text-tertiary text-[56px] leading-[64px] font-light tracking-[-1px] sm:mb-6 max-sm:text-center max-sm:text-[40px] max-sm:leading-none max-sm:tracking-[-0.714px]">
                   Next generation digital banking
                 </p>
@@ -63,7 +64,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="sm:h-[676px] bg-quaternary-background sm:pl-[165px] sm:pt-[96px] max-sm:pt-16 max-sm:px-6 max-sm:min-w-[327px]">
+        <div className="sm:h-[676px] bg-quaternary-background sm:pl-[165px] sm:pt-[96px] max-sm:pt-16 max-sm:px-6">
           <div className="sm:w-[635px] sm:h-[136px] flex sm:justify-between flex-col max-sm:text-center">
             <p className="text-tertiary text-[40px] font-light max-sm:text-[32px] max-sm:tracking-[-0.571px] max-sm:leading-[1.7rem]">
               Why choose Easybank?
@@ -76,21 +77,21 @@ export default function Home() {
           <div className="sm:flex sm:mt-[72px] sm:gap-8 max-sm:mt-14 max-sm:flex max-sm:flex-col max-sm:gap-8">
             {cardItemsMock.map(({ imageSrc, title, description, id }) => {
               return (
-                <div key={id}>
+                <Fragment key={id}>
                   <CardItems
                     imageSrc={imageSrc}
                     title={title}
                     description={description}
                   />
-                </div>
+                </Fragment>
               );
             })}
           </div>
         </div>
-        <div className="bg-[tertiary-background] sm:h-[659px] w-full sm:px-[165px] sm:pt-20 max-sm:px-6">
+        <div className="bg-tertiary-background sm:h-[659px] w-full sm:px-[165px] sm:pt-20 max-sm:px-6 max-sm:my-[88px]">
           <div className="sm:w-[1110px] sm:h-[499px]">
-            <div className="h-[64px]">
-              <p className="text-tertiary text-[40px] sm:font-light leading-[64px] tracking[-0.714px] max-sm:text-center">
+            <div className="sm:h-[64px] max-sm:h-[38px]">
+              <p className="text-tertiary sm:text-[40px] max-sm:text-[32px] sm:font-light leading-[64px] tracking[-0.714px] max-sm:text-center max-sm:tracking-[-0.571px]">
                 Latest Articles
               </p>
             </div>
