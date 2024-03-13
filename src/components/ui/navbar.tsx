@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
+import Portal from "../Portal";
 
 const links = [
   {
@@ -95,42 +96,29 @@ const Navbar = () => {
             />
           )}
           {isMobileMenuOpen ? (
-            <div>
-              <div
-                className="flex gap-[30px]
-          max-sm:flex-col max-sm:fixed
-          max-sm:left-[50%] max-sm:top-[50px] max-sm:text-center
-          max-sm:my-6 max-sm:px-8 max-sm:-translate-x-2/4
-          max-sm:w-[327px] max-sm:h-[265px] max-sm:bg-white"
-              >
-                {links.map((link) => {
-                  return (
-                    <Link
-                      className="text-quaternary tracking-[-0.108px]
-              text-sm
-              relative
-              after:content-['']
-              after:absolute
-              after:from-primary-from
-              after:to-primary-to
-              after:bg-gradient-135
-              after:h-1
-              after:w-0
-              after:left-0
-              after:top-8
-              after:transition-all
-              after:duration-350
-              hover:after:w-full
-              hover:text-tertiary"
-                      key={link.id}
-                      href={`/${link.name.toLowerCase}`}
-                    >
-                      {link.name}
-                    </Link>
-                  );
-                })}
+            <Portal>
+              <div className="fixed inset-0 bg-gradient-to-b from-tertiary to-[rgba(45, 49, 77, 0)] z-50 flex justify-center top-16">
+                <div
+                  className="flex gap-[30px]
+                    max-sm:flex-col 
+                    max-sm:text-center
+                    max-sm:w-[327px] max-sm:h-[265px] max-sm:bg-white
+                    mt-[24px] justify-center rounded"
+                >
+                  {links.map((link) => {
+                    return (
+                      <Link
+                        className="text-quaternary tracking-[-0.138px] text-lg leading-4"
+                        key={link.id}
+                        href={`/${link.name.toLowerCase}`}
+                      >
+                        {link.name}
+                      </Link>
+                    );
+                  })}
+                </div>
               </div>
-            </div>
+            </Portal>
           ) : null}
         </div>
         <Button className="h-11 min-w-[163px] max-sm:hidden">
