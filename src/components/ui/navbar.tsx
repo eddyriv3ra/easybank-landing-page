@@ -3,8 +3,8 @@ import React, { useState } from "react";
 import { Button } from "./button";
 import Image from "next/image";
 import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { MdClose } from "react-icons/md";
 import Portal from "../Portal";
 
 const links = [
@@ -83,15 +83,13 @@ const Navbar = () => {
         </div>
         <div className="sm:hidden">
           {isMobileMenuOpen ? (
-            <FontAwesomeIcon
+            <MdClose
               className="mobile-menu-button"
-              icon={faXmark}
               onClick={handleOnClick}
             />
           ) : (
-            <FontAwesomeIcon
+            <RxHamburgerMenu
               className="mobile-menu-button"
-              icon={faBars}
               onClick={handleOnClick}
             />
           )}
