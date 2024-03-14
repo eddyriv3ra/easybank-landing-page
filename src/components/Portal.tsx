@@ -6,7 +6,10 @@ interface IPortal {
   wrapperId?: string;
 }
 
-function Portal({ children, wrapperId = "react-portal-wrapper" }: PropsWithChildren<IPortal>) {
+function Portal({
+  children,
+  wrapperId = "react-portal-wrapper",
+}: PropsWithChildren<IPortal>) {
   const [wrapperElement, setWrapperElement] = useState<HTMLElement | null>(
     null
   );
@@ -31,7 +34,7 @@ function Portal({ children, wrapperId = "react-portal-wrapper" }: PropsWithChild
     };
   }, [wrapperId]);
   // wrapperElement state will be null on the very first render.
-  if (wrapperElement === null) return null;
+  if (!wrapperElement) return null;
 
   return createPortal(children, wrapperElement);
 }
