@@ -12,9 +12,9 @@ export default function Home() {
         <div className="flex bg-tertiary-background sm:h-[736px] w-full max-sm:flex-col-reverse">
           <div className="sm:h-[316px] sm:ml-[165px] sm:mt-44 max-sm:flex max-sm:flex-col max-sm:items-center mt-[41px]">
             <div className="sm:w-[447px] max-sm:mx-6">
-                <p className="text-tertiary text-[56px] leading-[64px] font-light tracking-[-1px] sm:mb-6 max-sm:text-center max-sm:text-[40px] max-sm:leading-none max-sm:tracking-[-0.714px]">
+                <h1 className="text-tertiary text-[56px] leading-[64px] font-light tracking-[-1px] sm:mb-6 max-sm:text-center max-sm:text-[40px] max-sm:leading-none max-sm:tracking-[-0.714px]">
                   Next generation digital banking
-                </p>
+                </h1>
               <div className="text-quaternary tracking-[-1px] leading-7 text-lg max-sm:text-center max-sm:text-[15px] max-sm:leading-[25px] max-sm:tracking-[-0.234px] max-sm:mt-4">
                 Take your financial life online. Your Easybank account will be a
                 one-stop-shop for spending, saving, budgeting, investing, and

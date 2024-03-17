@@ -45,15 +45,9 @@ const Navbar = () => {
           width={138}
           height={20}
           style={{ objectFit: "contain" }}
-          alt="easy bank icon"
+          alt="easy bank icon footer"
         />
-        <div
-          className="flex gap-[30px] max-sm:hidden"
-          // max-sm:flex-col max-sm:fixed
-          // max-sm:left-[50%] max-sm:top-[50px] max-sm:text-center
-          // max-sm:my-6 max-sm:px-8 max-sm:-translate-x-2/4
-          // max-sm:w-[327px] max-sm:h-[265px] max-sm:bg-white
-        >
+        <nav className="flex gap-[30px] max-sm:hidden">
           {links.map((link) => {
             return (
               <Link
@@ -80,13 +74,10 @@ const Navbar = () => {
               </Link>
             );
           })}
-        </div>
+        </nav>
         <div className="sm:hidden">
           {isMobileMenuOpen ? (
-            <MdClose
-              className="mobile-menu-button"
-              onClick={handleOnClick}
-            />
+            <MdClose className="mobile-menu-button" onClick={handleOnClick} />
           ) : (
             <RxHamburgerMenu
               className="mobile-menu-button"
